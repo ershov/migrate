@@ -1,0 +1,19 @@
+# local settings
+/conf/kit.local.conf
+
+# runtime data, in case DATA is pointed inside the repository
+/state/
+/state-new/
+/stage/
+/backup-*/
+safe-storage.tsv
+
+# scratch
+/.tmp/
+
+# editor and OS noise
+.DS_Store
+*~
+*~[0-9]*
+*.swp
+*.swo

@@ -1,0 +1,108 @@
+# rsync filter for ~/Library; first matching rule wins.
+
+# junk, caches, locks (any depth)
+- .DS_Store
+- .localized
+- *.plist.lockfile
+- Cache/
+- Caches/
+- Code Cache/
+- GPUCache/
+- GrShaderCache/
+- ShaderCache/
+- GraphiteDawnCache/
+- DawnCache/
+- DawnGraphiteCache/
+- DawnWebGPUCache/
+- CachedData/
+- CachedExtensionVSIXs/
+- CacheStorage/
+- ScriptCache/
+- component_crx_cache/
+- blob_storage/
+- Crashpad/
+- logs/
+- Logs/
+- Singleton*
+- vm_bundles/
+- aerials/
+
+# MDM and security agents
+- /*/*[Jj]amf*
+- /*/*[Cc]rowd[Ss]trike*
+- /*/*[Ff]alcon*
+- /*/*[Kk]olide*
+- /*/*[Cc]loudflare*
+- /*/*[Cc]ode42*
+- /*/*[Cc]isco*
+- /*/*[Oo]kta*
+- /*/*[Ss]elf?[Ss]ervice*
+- /*/*macadmins*
+- /*/com.apple.ManagedClient*
+
+# Preferences
+- /Preferences/ByHost/
+- /Preferences/com.apple.ncprefs.plist
+- /Preferences/MobileMeAccounts.plist
+- /Preferences/com.apple.madrid.plist
+- /Preferences/com.apple.MobileSMS.plist
+- /Preferences/com.apple.AddressBook.plist
+- /Preferences/com.apple.homed*.plist
++ /Preferences/***
+
+# Application Support: third-party plus a short Apple allow-list
++ /Application Support/com.apple.sharedfilelist/***
++ /Application Support/com.apple.wallpaper/***
+- /Application Support/com.apple.*
+- /Application Support/AddressBook/
+- /Application Support/Animoji/
+- /Application Support/AskPermission/
+- /Application Support/CallHistoryDB/
+- /Application Support/CallHistoryTransactions/
+- /Application Support/CloudDocs/
+- /Application Support/ControlCenter/
+- /Application Support/CrashReporter/
+- /Application Support/DifferentialPrivacy/
+- /Application Support/DiskImages/
+- /Application Support/Dock/
+- /Application Support/FaceTime/
+- /Application Support/FileProvider/
+- /Application Support/Knowledge/
+- /Application Support/Music/
+- /Application Support/SyncServices/
+- /Application Support/contactsd/
+- /Application Support/homeenergyd/
+- /Application Support/iCloud/
+- /Application Support/icdd/
+- /Application Support/identityservicesd/
+- /Application Support/locationaccessstored/
+- /Application Support/nap/
+- /Application Support/networkserviceproxy/
+- /Application Support/stickersd/
+- /Application Support/tipsd/
++ /Application Support/***
+
+# sandboxed apps: staged only, applied by hand (LOCAL.md L5)
++ /Containers/
++ /Containers/org.p0deje.Maccy/***
++ /Containers/com.simonguest.QCamera/***
+- /Containers/*
+
++ /Fonts/***
++ /Services/***
++ /Keyboard Layouts/***
++ /Input Methods/***
++ /KeyBindings/***
++ /PreferencePanes/***
++ /Screen Savers/***
++ /Spelling/***
++ /ColorPickers/***
++ /Colors/***
++ /Sounds/***
++ /Scripts/***
++ /Workflows/***
++ /QuickLook/***
++ /LaunchAgents/
++ /LaunchAgents/com.user.*
+- /LaunchAgents/*
+- /*

@@ -1,0 +1,7 @@
+# Copy to kit.local.conf and adjust. Anything set here overrides conf/kit.conf.
+# OLD_UUID and OLD_HOST are written by bin/110-OLD-prepare.sh.
+#OLD_HOST=old-mac.local
+#OLD_USER=$(id -un)
+#DATA=$HOME/migrate
+#RSYNC=/opt/homebrew/bin/rsync
+#REDACT='[Ee]xample[Cc]orp'

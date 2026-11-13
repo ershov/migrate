@@ -1,0 +1,24 @@
+# rsync excludes for the home pull; paths are anchored at ~.
+/Library/
+/.Trash/
+/migrate/stage/
+/migrate/backup-*/
+/migrate/state-new/
+/.ssh/cm-*
+/.bash_sessions/
+/.zsh_sessions/
+/.cups/
+/.osquery/
+/.anyconnect
+/.cisco/
+/.cache/uv/
+/.cache/puppeteer/
+/.npm/_cacache/
+/.ccache*/
+.DS_Store
+# optional: uncomment to skip bulky data
+#/Downloads/
+#/tmp/
+#/.lmstudio/models/
+#/.cache/huggingface/
+#/.cache/codex-runtimes/
